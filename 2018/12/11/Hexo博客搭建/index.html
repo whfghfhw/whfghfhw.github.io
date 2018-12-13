@@ -116,7 +116,7 @@
     <section class="article typo">
 
         <div class="article-entry" itemprop="articleBody">
-            <p>[TOC]</p>
+            <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>[TOC]</p>
 <h2 id="部署原理"><a href="#部署原理" class="headerlink" title="部署原理"></a>部署原理</h2><p><img src="/images/hexo%E9%83%A8%E7%BD%B2%E5%9B%BE-3.png" alt="hexo部署图"><br>使用Hexo需要Node.js环境，假设环境准备完毕，通过命令<code>hexo g</code>(g代表generate)，Hexo会在本地生成源文件，然后通过<code>hexo d</code>(d代表deploy)，发布至远程GitHub，实线箭头部分即可满足使用和配置博客的需要，如果希望进行代码级改造，可使用GitHub Desktop操作.</p>
 <table>
 <thead>
@@ -183,7 +183,11 @@
 <p><strong>注意：type, repo和branch的冒号后是有一个空格的，删掉空格发布不会报错，但是文件无法上传至GitHub。</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <p>等待1分钟左右，浏览器访问网址：<br>https://&lt;你Github账号名&gt;.github.io<br>比如我的博客：<br><a href="https://whfghfhw.github.io/" target="_blank" rel="noopener">https://whfghfhw.github.io/</a></p>
-<p>本文参考了以下文章，感谢：</p>
+<h2 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h2><ul>
+<li>如果提示没有操作文件权限怎么办？<br>切换root用户执行命令<code>sudo -s</code>或者直接对文件夹赋权，执行:<code>chmod -R 777 .</code>。</li>
+<li>提示Permission denied (publickey)<br>检查是否在GitHub上添加了本机正确的公钥，若确认配置都没问题，可能是长时间没有用ssh登录而失效，执行:<code>ssh-add ~/.ssh/id_rsa</code>。</li>
+</ul>
+<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><p>本文参考了以下文章，感谢：</p>
 <blockquote>
 <p><a href="https://www.simon96.online/2018/10/12/hexo-tutorial/" target="_blank" rel="noopener">https://www.simon96.online/2018/10/12/hexo-tutorial/</a><br><a href="https://www.cnblogs.com/jackyroc/p/7681938.html" target="_blank" rel="noopener">https://www.cnblogs.com/jackyroc/p/7681938.html</a><br><a href="http://cyzus.github.io/2015/06/21/github-build-blog/" target="_blank" rel="noopener">http://cyzus.github.io/2015/06/21/github-build-blog/</a></p>
 </blockquote>
@@ -191,7 +195,7 @@
         </div>
 
         <section class="meta">
-            <time class="time" itemprop="dateUpdated" datetime="2018-12-13T11:14:25+08:00" content="2018-12-13">
+            <time class="time" itemprop="dateUpdated" datetime="2018-12-13T11:37:40+08:00" content="2018-12-13">
                 <i class="fas fa-pen fa-fw" aria-hidden="true"></i>
                 本文最后更新于：2018-12-13
             </time>
@@ -338,7 +342,7 @@
             <div class="wrapper"><a class="s-toc rightBtn" title="固定到顶部" target="_blank" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
         </header>
         <div class="content pure">
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#部署原理"><span class="toc-text">部署原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Node-js"><span class="toc-text">安装Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Hexo"><span class="toc-text">安装Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用GitHub-Pages"><span class="toc-text">使用GitHub Pages</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成发布"><span class="toc-text">生成发布</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#目录"><span class="toc-text">目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署原理"><span class="toc-text">部署原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Node-js"><span class="toc-text">安装Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Hexo"><span class="toc-text">安装Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用GitHub-Pages"><span class="toc-text">使用GitHub Pages</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成发布"><span class="toc-text">生成发布</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见错误"><span class="toc-text">常见错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#鸣谢"><span class="toc-text">鸣谢</span></a></li></ol>
         </div>
     </section>
 
